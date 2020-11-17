@@ -14,6 +14,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/76f1f3cef9.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -42,34 +44,63 @@
 
 
 
-    <div id='blurContent'>
-        
-        <!-- Step2 : menu -->
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
+    <div id='blurContent' class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="mt-4">Alexandre Lemoine</h1>
+                <h2 class="mt-1">A la recherche d'un contrat de professionnalisation dans l'univers bière <i class="fas fa-beer"> !</i></h2>
             </div>
-        </nav>
-
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <section id="section-front" class="section-display">
+                    <h2>A propros</h2>
+                    <p>
+                        Formateur en informatique et développeur de profession, je suis aujourd'hui en reconversion professionnelle. J'ai pu découvrir la bière en tant que brasseur amateur, puis à travers plusieurs ouvrages tels que Bieronomics ou la série de livre publiée par la "Brewers Association" (Water, Yeast, Hops, Malt) que je suis en train de découvrir. Le développement Web n'a plus autant d'attrait pour moi aujourd'hui. J'ai donc décidé dans un premier temps de me diriger vers la formation. Apprendre et faire découvrir est un aspect que j’aime beaucoup. J’aimerai aujourd’hui y combiner mon intérêt grandissant pour l’univers de la bière : son histoire, l’artisanat, l’odeur de la bière qui trempe, les différents styles…
+                        Pour cela, je suis à la recherche d'un contrat de professionnalisation (alternance) de 6 à 12 mois dans le cadre de la formation Zythologue/Bièrologue à l'IFCO de Marseille. Cette formation ainsi que l'expérience acquise durant mon emploi dans l'univers de la bière me permettra d'atteindre mon objectif professionnel : celui de faire découvrir et d’animer des ateliers autour de la bière. 
+                    </p>
+                </section>
+                <section id="section-right">
+                    <h2>Études</h2>
+                    <p>
+                        <h3>Écoles d'ingénieur :</h3>
+                        <p>
+                            test
+                        </p>
+                        <h3>Brevet de Technicien Supérieur</h3>
+                        <p>
+                            test
+                        </p>
+                    </p>
+                </section>
+           </div>
+            <div class="col-4 text-center">
+                <div class="scene">
+                    <div class="cube">
+                    <div class="cube__face cube__face--front"><img src="alexandreLemoine.png" alt="Alexandre Lemoine"></div>
+                    <div class="cube__face cube__face--back">1</div>
+                    <div class="cube__face cube__face--right"><img src="livres.png" alt="Scolarité"></div>
+                    <div class="cube__face cube__face--left">2</div>
+                    <div class="cube__face cube__face--top">3</div>
+                    <div class="cube__face cube__face--bottom">4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <div class="btn-group w-100" role="group">
+                    <button type="button" class="btn btn-secondary btn-section" value="front">A propos</button>
+                    <button type="button" class="btn btn-secondary btn-section" value="right">Études</button>
+                    <button type="button" class="btn btn-secondary btn-section" value="back">Expériences pros</button>
+                    <button type="button" class="btn btn-secondary btn-section" value="left">Mes objectifs</button>
+                    <button type="button" class="btn btn-secondary btn-section" value="top">Mes passions</button>
+                    <button type="button" class="btn btn-secondary btn-section" value="bottom">Liens</button>
+                </div>
+            </div>    
+        </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

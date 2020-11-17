@@ -1,10 +1,21 @@
+body{
+    background: linear-gradient(145deg,#130f40,#2c3e50,#1e3799,#6a89cc);
+    color :white; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    background-color: rgba(0,0,0,0);
+}
 
 #loadingScreen{
     position:absolute;
+    width:50%;
+    margin-left:25%;
     margin-top:25vh;
     height:50vh;
     padding:12.5vh;
-    font-family: 'Open Sans', sans-serif;
+    z-index:1;
 }
 
 
@@ -13,7 +24,7 @@
     font-weight: bolder;
     min-width: 25px;
     margin-bottom:20px;
-    color:black;
+    color:white;
     animation-name: fadeWhiteToBlack;
     animation-duration: 5s;
     animation-iteration-count: 1;
@@ -89,7 +100,7 @@
     background-color: black;
     border: white 2px solid;
     border-radius:5px;
-    background: linear-gradient(to right, #bdc3c7 25%, #3498db 50%);
+    background: linear-gradient(145deg,#130f40,#2c3e50,#1e3799,#6a89cc);
     animation-duration: 5s;
     animation-name: loadingBarAnimation;
     animation-iteration-count: 1;
@@ -163,8 +174,22 @@
 #blurContent{
     animation-duration: 6s;
     animation-name: fadeBlurGeneral;
-    background-color: white;
     filter:blur(0px);
+    height:100vh;
+}
+
+#blurContent .row:nth-of-type(1){
+    height:25vh;
+}
+
+
+#blurContent .row:nth-of-type(2){
+    height:50vh;
+}
+
+
+#blurContent .row:nth-of-type(3){
+    height:25vh;
 }
 
 @keyframes fadeBlurGeneral {
@@ -180,3 +205,123 @@
         filter:blur(0px);
     }
 }
+
+/*title*/
+
+h1{
+    font-weight: 800;
+}
+
+h2{
+    font-size:1.5em;
+    width:50%;
+}
+
+section{
+    display:none;
+}
+
+.section-display{
+    display:block;
+}
+
+section p{
+    overflow-y: scroll;
+    position:absolute;
+    height:75%;
+}
+
+.btn-section:nth-of-type(1){
+    background-color: #6a89cc;
+}
+
+.btn-section:nth-of-type(2){
+    background-color: #4a69bd;
+}
+
+.btn-section:nth-of-type(3){
+    background-color: #1e3799;
+}
+
+.btn-section:nth-of-type(4){
+    background-color: #0c2461;
+}
+
+.btn-section:nth-of-type(5){
+    background-color: #34495e;
+}
+
+.btn-section:nth-of-type(6){
+    background-color:#2c3e50;
+}
+
+
+.scene {
+    width: 15vw;
+    height: 15vw;
+    perspective: 30vw;
+    margin-left: calc(100% - 15vw);
+  }
+  
+  .cube {
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-7.5vw);
+    transition: transform 1s;
+  }
+  
+  .cube.show-front  { transform: translateZ(-7.5vw) rotateY(   0deg); }
+  .cube.show-right  { transform: translateZ(-7.5vw) rotateY( -90deg); }
+  .cube.show-back   { transform: translateZ(-7.5vw) rotateY(-180deg); }
+  .cube.show-left   { transform: translateZ(-7.5vw) rotateY(  90deg); }
+  .cube.show-top    { transform: translateZ(-7.5vw) rotateX( -90deg); }
+  .cube.show-bottom { transform: translateZ(-7.5vw) rotateX(  90deg); }
+  
+  .cube__face {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    border: 2px solid black;
+    line-height: 15vw;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    box-shadow: black;
+  }
+  
+    
+  .cube__face img {
+    width:100%;
+    height:auto;
+    vertical-align: inherit;
+  }
+
+  .cube__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
+  .cube__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
+  .cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+  .cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+  .cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+  .cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+  
+  .cube__face--front  { transform: rotateY(  0deg) translateZ(7.5vw); }
+  .cube__face--right  { transform: rotateY( 90deg) translateZ(7.5vw); }
+  .cube__face--back   { transform: rotateY(180deg) translateZ(7.5vw); }
+  .cube__face--left   { transform: rotateY(-90deg) translateZ(7.5vw); }
+  .cube__face--top    { transform: rotateX( 90deg) translateZ(7.5vw); }
+  .cube__face--bottom { transform: rotateX(-90deg) translateZ(7.5vw); }
+  
+  label { margin-right: 10px; }
+
+  /*Scrollbar*/
+
+p::-webkit-scrollbar {
+    width: 20px;
+    background-color: rgba(0,0,0,0); 
+  }
+  p::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right,#1e3799,#6a89cc);
+    border-radius:10px;
+  }
