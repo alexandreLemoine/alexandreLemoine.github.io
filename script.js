@@ -19,8 +19,6 @@ radioGroup.forEach(function(item){
             let currentSection = document.querySelector('.section-display');
             currentSection.classList.remove('section-display');
 
-            console.log(this.value);
-
             let newSection = document.querySelector('#section-' +  this.value);
             newSection.classList.add('section-display');
 
@@ -35,3 +33,5 @@ radioGroup.forEach(function(item){
 
         });
 });
+
+document.querySelector('.btn-section').click();
