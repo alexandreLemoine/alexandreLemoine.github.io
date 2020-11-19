@@ -8,7 +8,7 @@
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -22,34 +22,31 @@
 <body>
     
     <!-- Step1 : écran de chargement -->
-    <div class="container" id="loadingScreen">
-        <div class="row align-items-center">
-            <div class="col text-center">
-                
-                <div id="labelLoadingBar">
-
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-
-                    <div>Chargement du profil :</div>
-                </div>
-                <span></span>
-                <div id="loadingBar">
-                    <div></div>
-                </div>
-            </div>
-        </div> 
+    <div id="loadingScreen">
+        
+        <div id="labelLoadingBar">
+            <div>Chargement du profil : <span></span></div>
+            
+        </div>
+        
+        <div id="loadingBar">
+            <div></div>
+        </div>
+   
     </div>
+
+    <!-- decoration -->
 
     <div id="border"></div>
     <div id="border2"> </div>
 
-    <div id='blurContent' class="container">
+
+
+    <div id='mainContent' class="container">
 
         <div class="row">
             <div class="col-sm">
-                <h1 class="mt-5">Alexandre Lemoine</h1>
+                <h1></h1>
                 <blockquote class="mt-1">
                     <p>
                         A la recherche d'un contrat de professionnalisation dans l'univers bière <i class="fas fa-beer"> !</i>
@@ -58,7 +55,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-8">
+            <div class="col-8 col">
                 
                 <!--*********************** LISTE DES SECTIONS *************************-->
                 <!--A propos-->
@@ -271,53 +268,35 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+        
+            <div class="col">
+                <div id ="menu" role="group" >
+                    <button type="button" class="btn btn-section active-button" value="front">
+                        A propos
+                    </button>
+                    <button type="button" class="btn btn-section" value="right">
+                        Études
+                    </button>
+                    <button type="button" class="btn btn-section" value="back">
+                        Expériences
+                    </button>
+                    <button type="button" class="btn btn-section" value="left">
+                        Compétences
+                    </button>
+                    <button type="button" class="btn btn-section" value="top">
+                      Passions
+                    </button>
+                    <button type="button" class="btn btn-section" value="bottom">
+                        Passions
+                    </button>
+                </div> 
+            
+            </div>
+        </div>
     </div>
 
-    <div id ="menu" role="group">
-        <button type="button" class="btn btn-section" value="front">
-            <span class="text">A propos</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-        </button>
-        <button type="button" class="btn btn-section" value="right">
-            <span class="text">Études</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-        </button>
-        <button type="button" class="btn btn-section" value="back">
-            <span class="text">Expériences</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-        </button>
-        <button type="button" class="btn btn-section" value="left">
-            <span class="text">Compétences</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-        </button>
-        <button type="button" class="btn btn-section" value="top">
-            <span class="text">Passions</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-        </button>
-        <button type="button" class="btn btn-section" value="bottom">
-            <span class="text">Passions</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-        </button>
-    </div> 
-
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -24,23 +24,28 @@ body{
     border-bottom:solid 1px white;
 }
 
+#fusee{
+    position:absolute;
+}
+
 .container{
     background-color: rgba(0,0,0,0);
 }
 
 #loadingScreen{
-    position:absolute;
-    width:50%;
-    margin-left:25%;
-    margin-top:25vh;
-    height:50vh;
-    padding:12.5vh;
+    position:fixed;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100px;
     z-index:1;
 }
 
 
 /*LABEL BARRE DE CHARGEMENT */
 #labelLoadingBar{
+    position:absolute;
+    bottom:25px;
     font-weight: bolder;
     min-width: 25px;
     margin-bottom:20px;
@@ -65,11 +70,7 @@ body{
     }
   }
 
-#labelLoadingBar + span{
-    width:50px;
-}
-
-#labelLoadingBar + span::after{
+#labelLoadingBar div > span::after{
     content: "terminé !";
     animation-name: changeSubStatusLoading;
     animation-duration: 6s;
@@ -113,14 +114,13 @@ body{
 /*BARRE DE CHARGEMENT */
 
 #loadingBar{
-    width:50%;
-    margin-top: 25px;
-    margin-left:25%;
+    position:absolute;
+    bottom:0;
+    width:calc(100% - 4px);
     height:20px;
     background-color: black;
     border: white 2px solid;
-    border-radius:5px;
-    background: linear-gradient(145deg,#130f40,#2c3e50,#1e3799,#6a89cc);
+    background: linear-gradient(145deg,yellow,orange,#8e44ad);
     animation-duration: 5s;
     animation-name: loadingBarAnimation;
     animation-iteration-count: 1;
@@ -191,41 +191,129 @@ body{
     }
 }
 
-#blurContent{
-    animation-duration: 6s;
-    animation-name: fadeBlurGeneral;
-    filter:blur(0px);
+#mainContent{
+    padding:10vh 0 10vh 0;
     height:100vh;
 }
 
-#blurContent .row:nth-of-type(1){
-    height:25vh;
+#mainContent .row:nth-of-type(1){
+    min-height:150px;
+    height:20%;
+}
+
+#mainContent .row:nth-of-type(2){
+    min-height:350px;
+    height:60%;
+}
+
+#mainContent .row:nth-of-type(2) .col{
+    opacity:1;
+    animation-duration: 5s;
+    animation-name: loadingContentText;
+}
+
+#mainContent .row:nth-of-type(3){
+    height:20%;
 }
 
 
-#blurContent .row:nth-of-type(2){
-    height:calc(75vh - 100px);
-}
+@keyframes loadingContentText {
+    0% {
+        opacity :0;
 
-
-@keyframes fadeBlurGeneral {
-    0%{
-        filter:blur(5px);
     }
 
-    99%{
-        filter:blur(5px);
+    60%{
+        opacity:0;
     }
 
     100%{
-        filter:blur(0px);
+        opacity:1;
     }
 }
 
 /*title*/
 
-h1{
+h1:after{
     font-weight: 800;
+    font-family: 'Goldman', cursive;
+    color:yellow;
+    text-shadow:2px 2px black;
+    content :"Alexandre Lemoine";
+    animation-duration: 5s;
+    animation-name: loadingName;
+    animation-iteration-count: 1;
+    transition-duration: 0.1s;
+}
+
+@keyframes loadingName {
+    0% {
+        content :"A";
+    }
+
+    5%{
+        content :"Al";
+    }
+
+    10%{
+        content :"Ale";
+    }
+
+    15%{
+        content :"Alex";
+    }
+
+    20%{
+        content :"Alexa";
+    }
+
+    25%{
+        content :"Alexan";
+    }
+
+    30%{
+        content :"Alexand";
+    }
+
+    35%{
+        content :"Alexandr";
+    }
+
+    40%{
+        content :"Alexandre";
+    }
+
+    45%{
+        content :"Alexandre L";
+    }
+
+    50%{
+        content :"Alexandre Le";
+    }
+
+    55%{
+        content :"Alexandre Lem";
+    }
+
+    60%{
+        content :"Alexandre Lemo";
+    }
+
+    65%{
+        content :"Alexandre Lemoi";
+    }
+
+    70%{
+        content :"Alexandre Lemoin";
+    }
+
+    75%{
+        content :"Alexandre Lemoine";
+
+    }
+
+
+
 }
 
 h1 + h2{
@@ -244,7 +332,7 @@ section{
 .textSection{
     overflow-y: scroll;
     position:absolute;
-    height:calc(75% - 20px);
+    height:calc(100% - 20px);
     width:calc(100% - 20px);
     padding:10px;
 }
@@ -252,117 +340,30 @@ section{
 /***************************************/
 /*MENU*/
 
-#menu{
-    position:fixed;
-    left: 15px;
-    bottom: 20px;
-    right:15px;
-}
-
-#menu .btn{
-    width:calc((100% - 30px) / 6 );
-}
-
 #menu .btn {
     color: white;
-    padding: 0.7em calc(0.7em * 1.2);
-    display: inline-block;
-    border: 3px solid transparent;
-    position: relative;
-    font-size: 1.5em;
-    cursor: pointer;
-    letter-spacing: 0.07em;
-    font-family: 'Open Sans', sans-serif;
+    background-color:#8e44ad;
+    text-transform: uppercase;
+    transform: skewX(-15deg);
+    box-shadow: 6px 6px 0 black;
+    font-weight:bold;
+    transition-duration: 0.3s;
   }
-  #menu .btn .text {
-    transform: translate3d(0, 0.7em, 0);
-    display: block;
-    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
-  }
-  #menu .btn:after {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    left: calc(0.7em * 1.2);
-    right: calc(0.7em * 1.2);
-    height: 3px;
-    background: white;
-    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
-    transform-origin: left;
-  }
-  #menu .line {
-    position: absolute;
-    background: white;
-  }
-  #menu .line.-right, #menu .line.-left {
-    width: 3px;
-    bottom: -3px;
-    top: -3px;
-    transform: scale3d(1, 0, 1);
-  }
-  #menu .line.-top, #menu .line.-bottom {
-    height: 3px;
-    left: -3px;
-    right: -3px;
-    transform: scale3d(0, 1, 1);
-  }
-  #menu .line.-right {
-    right: -3px;
-    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
-    transform-origin: top;
-  }
-  #menu .line.-top {
-    top: -3px;
-    transition: transform 0.08s linear 0.43s;
-    transform-origin: left;
-  }
-  #menu .line.-left {
-    left: -3px;
-    transition: transform 0.08s linear 0.51s;
-    transform-origin: bottom;
-  }
-  #menu .line.-bottom {
-    bottom: -3px;
-    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
-    transform-origin: right;
-  }
-  #menu .btn:hover .text,
-  #menu .btn:active .text {
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
-  }
-  #menu .btn:hover:after,
-  #menu .btn:active:after {
-    transform: scale3d(0, 1, 1);
-    right: -3px;
-    left: -3px;
-    transform-origin: right;
-    transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
-  }
-  #menu .btn:hover .line,
-  #menu .btn:active .line {
-    transform: scale3d(1, 1, 1);
-  }
-  #menu .btn:hover .line.-right,
-  #menu .btn:active .line.-right {
-    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
-    transform-origin: bottom;
-  }
-  #menu .btn:hover .line.-top,
-  #menu .btn:active .line.-top {
-    transition: transform 0.08s linear 0.4s;
-    transform-origin: right;
-  }
-  #menu .btn:hover .line.-left,
-  #menu .btn:active .line.-left {
-    transition: transform 0.08s linear 0.48s;
-    transform-origin: top;
-  }
-  #menu .btn:hover .line.-bottom,
-  #menu .btn:active .line.-bottom {
-    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
-    transform-origin: left;
-  }
+  
+#menu .btn:hover{
+transform: skewX(-15deg);
+box-shadow: 6px 6px 0 white;
+background-color:black;
+color:#8e44ad;
+}
+
+#menu .active-button{
+    transform: skewX(-15deg);
+    box-shadow: 6px 6px 0 yellow;
+    background-color:black;
+    color:#8e44ad;
+}
+
 
 /*************************************/
 /*CUBE*/
@@ -430,4 +431,84 @@ section{
 .textSection::-webkit-scrollbar-thumb {
     background: white;
     border-radius:10px;
+  }
+
+
+  @media (max-width : 1024px){
+
+    #loadingScreen{
+        background-color:white;
+    }
+    
+    #labelLoadingBar{
+
+        color:black;
+   
+    }
+
+    #mainContent{
+        padding:15px 20px 10px 20px;
+    }
+
+    h1{
+        font-size:2em;
+    }
+
+    .scene{
+        display:none;
+    }
+
+    #mainContent .row:nth-of-type(2) > div:nth-of-type(1) {
+        flex-basis: 0;
+        flex:inherit;
+        max-width: 100%;
+        height:90%;
+    }
+
+    #mainContent .row:nth-of-type(2) > div:nth-of-type(2) {
+        flex-basis: 0;
+        flex:inherit;
+        width: 0%;
+        height:0;
+    }
+
+    #mainContent .row:nth-of-type(2) {
+        
+        height:70%;
+    }
+
+    #mainContent .row:nth-of-type(3) {    
+        height:10%;
+    }
+
+    #menu{
+        position:relative;
+        bottom:0;
+    }
+
+    #menu .btn{
+        display:none;
+    }
+
+    #menu .active-button + button,#menu .previous-button{
+        display: inline-block;
+        width: 49%;
+    }
+
+    #menu .active-button + button::after{
+        content:">";
+    }
+
+    #menu .previous-button::before{
+        content:"<";
+    }
+
+    .textSection::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0,0,0,0); 
+  }
+
+
+
+    
   }

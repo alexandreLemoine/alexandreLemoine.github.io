@@ -22,6 +22,23 @@ radioGroup.forEach(function(item){
             let newSection = document.querySelector('#section-' +  this.value);
             newSection.classList.add('section-display');
 
+            //desactivation du previous button
+            let curentPreviousButton = document.querySelector('.previous-button');
+            if(curentPreviousButton){
+                curentPreviousButton.classList.remove('previous-button');
+            }
+            
+            // désactivation du bouton courant
+            let currentButton = document.querySelector('.active-button');
+            currentButton.classList.remove('active-button');
+
+            //ajout de la classe bouton actif sur le bouton choisi + bouton previous
+            this.classList.add('active-button');
+            currentButton = document.querySelector('.active-button');
+            
+            if(currentButton.previousElementSibling){
+                this.previousElementSibling.classList.add('previous-button');
+            }
 
             // Modification du cube
             let showClass = 'show-' + this.value;
