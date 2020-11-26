@@ -3,300 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Alexandre Lemoine</title>
 
-    <!--FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <script src="https://kit.fontawesome.com/76f1f3cef9.js" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://kit.fontawesome.com/76f1f3cef9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <!-- Step1 : écran de chargement -->
-    <div id="loadingScreen">
-        
-        <div id="labelLoadingBar">
-            <div>Chargement du profil : <span></span></div>
-            
+    <header>
+
+        <div>
+            <img src="alexandre_lemoine.jpg" alt="alexandre_lemoine_photo">
         </div>
-        
-        <div id="loadingBar">
-            <div></div>
+        <div>
+            <h1>Alexandre Lemoine</h1>
+            <i>- 31 ans -</i>
+            <h2>Biérologie</h2>
+            <h3>Etudiant IFCO Marseille</h3>
+            <p class='no-print'> 
+                Recherche d’un contrat de professionnalisation
+                dans l’univers de la bière : production, vente,
+                service/bar, gestion, marketing, communication,
+                etc.
+            </p>
         </div>
-   
-    </div>
-
-    <!-- decoration -->
-
-    <div id="border"></div>
-    <div id="border2"> </div>
-
-
-
-    <div id='mainContent' class="container">
-
-        <div class="row">
-            <div class="col-sm">
-                <h1></h1>
-                <blockquote class="mt-1">
-                    <p>
-                        A la recherche d'un contrat de professionnalisation dans l'univers bière <i class="fas fa-beer"> !</i>
-                    </p>
-                </blockquote>
-            </div>
+        <div>
+            <ul>
+                <li><i class="fas fa-home"></i> Juvignac</li>
+                <li><i class="fas fa-car"></i> Permis B</li>
+                <li><i class="fas fa-phone"></i> 06 50 14 36 51</li>
+                <li><i class="fas fa-envelope"></i> lemoine.alexandre.b@gmail.com</li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="col-8 col">
-                
-                <!--*********************** LISTE DES SECTIONS *************************-->
-                <!--A propos-->
-                
-                <section id="section-front" class="section-display">
-                    <h2>A propros</h2>
-                    <p class="textSection">
-                        Formateur en informatique et développeur de profession, je suis aujourd'hui en reconversion professionnelle. J'ai pu découvrir la bière en tant que brasseur amateur, puis à travers plusieurs ouvrages tels que Bieronomics ou la série de livre publiée par la "Brewers Association" (Water, Yeast, Hops, Malt) que je suis en train de découvrir. Le développement Web n'a plus autant d'attrait pour moi aujourd'hui. J'ai donc décidé dans un premier temps de me diriger vers la formation. Apprendre et faire découvrir est un aspect que j’aime beaucoup. J’aimerai aujourd’hui y combiner mon intérêt grandissant pour l’univers de la bière : son histoire, l’artisanat, l’odeur de la bière qui trempe, les différents styles…
-                        Pour cela, je suis à la recherche d'un contrat de professionnalisation (alternance) de 6 à 12 mois dans le cadre de la formation Zythologue/Bièrologue à l'IFCO de Marseille. Cette formation ainsi que l'expérience acquise durant mon emploi dans l'univers de la bière me permettra d'atteindre mon objectif professionnel : celui de faire découvrir et d’animer des ateliers autour de la bière. 
-                    </p>
-                </section>
-
-                <!--ETUDES-->
-
-                <section id="section-right">
-                    <h2>Études</h2>
-                    <div class="textSection">
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-book"></i> Autodidacte</h3>
-                            <i>2019 – 2021</i>
-                            <p>
-                                Brassage de bière : conception, fermentation, embouteillage
-                                <ul>
-                                    <li>
-                                        Yeast, Water, Hops, Malt
-                                    </li>
-                                    <li>
-                                        La petite encyclopédie de la bière
-                                    </li>
-                                    <li>
-                                        Créer et développer sa microbrasserie
-                                    </li>
-                                    <li>
-                                        Bieronomics
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                       
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-book"></i> ESIEE</h3>
-                            <i>2011 – 2014</i>
-                            <p>
-                                Ingénieur Informatique - développement multimédia / 3D    
-                            </p>
-                        </div>
-                        
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-book"></i> Lycée René Descartes</h3>
-                            <i>2009 – 2011</i>
-                            <p>
-                                BTS informatique de gestion option développeur d'applications
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!--Expériences pros-->
-
-                <section id="section-back">
-                    <div class="textSection">
-                        <h2>Expériences professionnelles</h2>
-                        
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> Ligue de l'enseignement</h3>
-                            <i>2020</i>
-                            <i> | Formateur</i>
-                            <p>
-                                Accompagner et préparer les apprenants aux « Techniques d’intégration et de Développement Web » au sein du chantier de réinsertion professionnelle « Défi Web » : Cours présentiels, distanciels, exercices et travaux dirigés.
-                            </p>
-                        </div>
-
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> CGI</h3>
-                            <i>2019 – 2020</i>
-                            <i> | Analyste</i>
-                            <ul>
-                                <li>
-                                    Développement d'applications / Back-end php/symfony, bdd/mySql
-                                </li>
-                                <li>
-                                    Développement d’applications / Front-end / Back-end/ JAVA / Bootstrap / thymeleaf
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> Consortium immobilier</h3>
-                            <i>2018 – 2019</i>
-                            <i> | Développeur WEB</i>
-                            <ul>
-                                <li>
-                                    Maintenance et évolution des portails WEB
-                                </li>
-                                <li>
-                                    Création de contenus dynamiques par la programmation (vidéos, données, etc.)
-                                </li>
-                                <li>
-                                    Data Mining
-                                </li>
-                                <li>
-                                    Développement d'applications WEB (Laravel ou From scratch)
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> Entreprise libérale</h3>
-                            <i>2018 – 2019</i>
-                            <i> | Consultant formateur informatique et communication</i>
-                            <ul>
-                                <li>
-                                    Formations à destination des professionnels libéraux, TPE / PME en Informatique et Communication (réseaux sociaux, print, wordpress, cybersécurité) → 5 formations sur un an (2018)
-                                </li>
-                                <li>
-                                    Création de site internet
-                                </li>
-                                <li>
-                                    Conseils et développement en communication digitale
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> Platyplus</h3>
-                            <i>2015 – 2017</i>
-                            <i> | Entrepreneur - Co-fondateur</i>
-                            <ul>
-                                <li>
-                                    Formations à destination des professionnels libéraux, TPE / PME en Informatique et Communication (réseaux sociaux, print, wordpress, cybersécurité) → 30 formations sur deux ans (2015 - 2017)
-                                </li>
-                                <li>
-                                    Gestion et élaboration des projets techniques WEB
-                                </li>
-                                <li>
-                                    Rédaction de cahiers des charges / suivi de projets
-                                </li>
-                                <li>
-                                    Administration BDD
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> Z and Z</h3>
-                            <i>2014 – 2015</i>
-                            <i> | Développeur WEB</i>
-                            <ul>
-                                <li>
-                                    Développement de sites internet responsive HTML5 / CSS3/ PHP 5 sous Symfony ou From Scratch
-                                </li>
-                                <li>
-                                    Édition et retouche d'image
-                                </li>
-                                <li>
-                                    Administration système / environnement informatique (6 personnes)
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="blockEtude">
-                            <h3><i class="fas fa-briefcase"></i> MBDA</h3>
-                            <i>2011 – 2014</i>
-                            <i> | Apprentis | conception Serious Game</i>
-                            <ul>
-                                <li>
-                                   Description, préparation et conception des "Serious Games"(de la gestion de projet à la livraison produit, en passant par la 3D et la gestion de l'interface) [C# / JAVASCRIPT]
-                                </li>
-                                <li>
-                                  Conception des interfaces d'apprentissages : maquettage et conception (Photoshop)
-                                </li>
-                                <li>
-                                    Création des modèles 3D : 3DSMax / Maya
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!--Objectifs-->
-                <section id="section-left">
-                    <h2>Objectifs</h2>
-                    
-                </section>
-
-                <!--Mes passions-->
-                <section id="section-top">
-                    <h2>Mes passions</h2>
-                    
-                </section>
-
-                <!--Liens-->
-                <section id="section-bottom">
-                    <h2>Mes passions</h2>
-                    
-                </section>
-           
-            </div>
-            <div class="col-4 text-center">
-                <div class="scene">
-                    <div class="cube">
-                    <div class="cube__face cube__face--front"><img src="alexandreLemoine.png" alt="Alexandre Lemoine"></div>
-                    <div class="cube__face cube__face--back"><img src="travail.png" alt="Travail"></div>
-                    <div class="cube__face cube__face--right"><img src="livres.png" alt="Scolarité"></div>
-                    <div class="cube__face cube__face--left">2</div>
-                    <div class="cube__face cube__face--top">3</div>
-                    <div class="cube__face cube__face--bottom">4</div>
-                    </div>
-                </div>
-            </div>
+        <div class='print'>
+            <p>
+                Recherche d’un contrat de professionnalisation
+                dans l’univers de la bière : production, vente,
+                service/bar, gestion, marketing, communication,
+                etc.
+            </p>
         </div>
-        <div class="row">
-        
-            <div class="col">
-                <div id ="menu" role="group" >
-                    <button type="button" class="btn btn-section active-button" value="front">
-                        A propos
-                    </button>
-                    <button type="button" class="btn btn-section" value="right">
-                        Études
-                    </button>
-                    <button type="button" class="btn btn-section" value="back">
-                        Expériences
-                    </button>
-                    <button type="button" class="btn btn-section" value="left">
-                        Compétences
-                    </button>
-                    <button type="button" class="btn btn-section" value="top">
-                      Passions
-                    </button>
-                    <button type="button" class="btn btn-section" value="bottom">
-                        Passions
-                    </button>
-                </div> 
-            
-            </div>
+    </header>
+    <section id='competences'>
+        <h2>Compétences</h2>
+        <div id='nuage_mots'>
+            <span class="bleu">Photoshop</span>
+            <span class='bleu'>Communication</span>
+            <span class='bleu'>Anglais</span>
+            <span class='bleu'>Animation de formation</span>
+            <span class='bleu'>Programmation</span>
+            <span class='jaune'>Brassage</span>
+            <span class='bleu'>Conception de formation</span>
+            <span class='jaune'>Culture bière</span>
+            <span class='bleu'>Réseaux sociaux</span>
+            <span class='bleu'>WEB</span>
+            <span class='jaune'>Dégustation</span>
+            <span class='jaune'>Relation client</span>
         </div>
-    </div>
+    </section>
 
-    
     <script src="script.js"></script>
 </body>
 </html>

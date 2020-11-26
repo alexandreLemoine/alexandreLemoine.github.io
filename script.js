@@ -1,54 +1,39 @@
-setTimeout(function(){
+let couleurBleu = ['#3498db','#2980b9','#27ae60','#2ecc71','#16a085','#1abc9c','#25CCF7','#1B9CFC','#474787'];
+let couleurJaune = ['#f1c40f','#f39c12','#e67e22','#d35400'];
 
-    document.getElementById('loadingScreen').remove();
+let motsNuageBleu = document.querySelectorAll('.bleu');
 
-}, 8000);
+motsNuageBleu.forEach(function(item){
 
-//*********************** */
-// Changement de section
-
-let cube = document.querySelector('.cube');
-let radioGroup = document.querySelectorAll('.btn-section');
-let currentClass = '';
-
-radioGroup.forEach(function(item){
-
-    item.addEventListener( 'click', function(e){
-
-            //Modification de la section lecture
-            let currentSection = document.querySelector('.section-display');
-            currentSection.classList.remove('section-display');
-
-            let newSection = document.querySelector('#section-' +  this.value);
-            newSection.classList.add('section-display');
-
-            //desactivation du previous button
-            let curentPreviousButton = document.querySelector('.previous-button');
-            if(curentPreviousButton){
-                curentPreviousButton.classList.remove('previous-button');
-            }
-            
-            // désactivation du bouton courant
-            let currentButton = document.querySelector('.active-button');
-            currentButton.classList.remove('active-button');
-
-            //ajout de la classe bouton actif sur le bouton choisi + bouton previous
-            this.classList.add('active-button');
-            currentButton = document.querySelector('.active-button');
-            
-            if(currentButton.previousElementSibling){
-                this.previousElementSibling.classList.add('previous-button');
-            }
-
-            // Modification du cube
-            let showClass = 'show-' + this.value;
-            if ( currentClass ) {
-                cube.classList.remove( currentClass );
-            }
-            cube.classList.add( showClass );
-            currentClass = showClass;
-
-        });
+    let randomNumber = Math.floor(Math.random() * 9);
+    item.style.color = couleurBleu[randomNumber];
+    randomElement(item);
 });
 
-document.querySelector('.btn-section').click();
+let motsNuageJaune = document.querySelectorAll('.jaune');
+
+motsNuageJaune.forEach(function(item){
+
+    let randomNumber = Math.floor(Math.random() * 4);
+    item.style.color = couleurJaune[randomNumber];
+    randomElement(item);
+});
+
+function randomElement(item){
+    
+    let randomNumber = 2 - Math.random() * 1;
+    item.style.fontSize = randomNumber + 'em';
+
+    let position = Math.round(Math.random());
+
+    if(position == 1) {
+        item.style.textAlign = 'left';
+    }
+    else{
+        item.style.textAlign = 'right';
+    }
+    
+    let marginTop = Math.floor(Math.random() * 50);
+    
+    item.style.marginTop = marginTop +'px';
+}
